@@ -1,19 +1,21 @@
-let nome = document.getElementById("nome");
-if (nome.value != null) {
-    let valorNome = nome.value;
-}
-
-let email = document.getElementById("email");
-if (email.value != null) {
-    let valorEmail = email.value;
-}
-
-let numero = document.getElementById("numero");
-if (numero.value != null) {
-    let valorNumero = numero.value;
-}
-
-let mensagem = document.getElementById("mensagem");
-if (mensagem.value != null) {
-    let valorMensagem = mensagem.value;
+function validar(form){
+    if(form.nome.value == ""){
+        alert("Por favor, preencha o campo nome");
+        form.nome.focus();
+        return false;
+    }else if(form.email.value == ""){
+        alert("Por favor, preencha o campo e-mail");
+        form.email.focus();
+        return false;
+    }else if(form.numero.value == ""){
+        alert("Por favor, preencha o campo número");
+        form.numero.focus();
+        return false;
+    }else if(form.mensagem.value == ""){
+        alert("Por favor, preencha o campo mensagem");
+        form.mensagem.focus();
+        return false;
+    }else{
+        return true; 
+    }
 }
